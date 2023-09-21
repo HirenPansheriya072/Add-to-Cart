@@ -1,0 +1,191 @@
+@import "./Color.scss";
+
+.cart{
+    height: 100%;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+
+    > main{
+        padding: 2rem;
+        overflow-y: auto;
+            &::-webkit-scrollbar{
+                display: none;
+            }
+
+            > .empty {
+                > img {
+                    // mix-blend-mode: multiply;
+                    border-radius: 30%;
+                    margin-left: 40%;
+                    margin-top: 5%;
+                }
+
+                 > h2 {
+                    margin-top: 15px;
+                    color: $tertiary;
+                    font: 100 2rem "Roboto";
+                    margin-left: 50%;
+                    font-weight: 300;
+                }
+            }
+            
+    }
+
+    > aside{
+        border-radius: 20px;
+        background-color: $primary;
+        color: $tertiary;
+        height: auto;
+        width: 100%;
+        box-shadow: -10px 0px 10px rgba(0, 0, 0, 0.182);
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+            > .calc {
+                margin-top: 0rem;
+                position: fixed;
+                top: 10rem;
+
+                > h2{
+                    margin: 1rem;
+                    font: 100 1.8rem "Roboto";
+                    letter-spacing: 2px;
+    
+                    &:last-of-type{
+                        font-weight: 600;
+                    }
+                }
+
+                > h3 {
+                    font: 100 1.2rem "Roboto";
+                    letter-spacing: 2px;
+                    display: flex;
+                    justify-content: center;
+                    // text-align: center;
+                    // font-weight: 400;
+
+                    > span {
+                        color: red;
+                        font-weight: 500;
+                    }
+                }
+
+                > .offers {
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    margin-top: 1rem;
+                    margin-left: 2rem;
+                    border: none;
+                    
+                    > h3 {
+                        background-color: white;
+                        border-radius: 7px;
+                        border: 1px solid black;
+                        color: black;
+                        width: 15rem;
+                        height: 2rem;
+                        text-align: center;
+                        padding: 5px;
+                    }
+
+                    > label {
+                        position: relative;
+                        top: 10px;
+                        font: 100 1.2rem "Roboto";
+                        letter-spacing: 2px;
+                    }
+                    
+                   > select {
+                     width: 15rem;
+                     height: 2.5rem;
+                     border-radius: 5px;
+                     text-align: center;
+                     appearance: none;
+                     font-size: 1.2rem;
+                    }
+
+                    button {
+                        width: 10rem;
+                        height: 3rem;
+                        color: black;
+                        background-color: white;
+                        font: 500 1.2rem "Roboto";
+                        border-radius: 10px;
+                        margin-top: 2rem;
+                        cursor: pointer;
+
+                        &:hover {
+                            opacity: 0.8;
+                        }
+                    }
+                 }
+            }
+
+            
+    }
+}
+
+
+.cartItem{
+    background-color: $tertiary;
+    width: 100%;
+    border-radius: 10px;
+    margin: 2rem 0;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr 1fr;
+    align-items: center;
+
+        img{
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        article{
+            padding: 5rem;
+        }
+
+        > div {
+            display: flex;
+            align-items: center;
+            height: 100%;
+
+                button{
+                    width: 30px;
+                    height: 30px;
+                    border: none;
+                    background-color: $primary;
+                    color: $tertiary;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    font-size: 23px;
+
+                        &:hover{
+                            background-color: $secondary;
+                        }
+                }
+
+                p{
+                    width: 30px;
+                    height: 30px;
+                    display: grid;
+                    place-items: center;
+                }
+
+                
+        }
+
+            > svg{
+                cursor: pointer;
+                font-size: 1.5rem;
+                display: inline-block;
+                margin: auto;
+
+                    &:hover{
+                        color: $secondary;
+                    }
+            }
+}
